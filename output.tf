@@ -69,3 +69,17 @@ output "create_delete_ebs_snapshots_policy_document" {
   value = "${data.aws_iam_policy_document.create_delete_ebs_snapshots.json}"
 }
 
+# ec2_assume_policy
+output "ec2_assume_policy_document" {
+  value = "${data.aws_iam_policy_document.ec2_assume_policy.json}"
+}
+
+# kms_readonly
+output "kms_readonly_arn" {
+  value = "${aws_iam_policy.kms_readonly.arn}"
+}
+
+output "kms_readonly_policy_document_json" {
+  value = "${data.aws_iam_policy_document.kms_readonly.json}"
+}
+
