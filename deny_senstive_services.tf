@@ -11,20 +11,6 @@ resource "aws_iam_policy" "deny_sestive_services" {
 }
 
 data "aws_iam_policy_document" "deny_sestive_services" {
-  # explicitly deny unencrypted communications
-  statement {
-    # sid *must* be alphanumberic
-    sid       = "20181021"
-    effect    = "Deny"
-    resources = [ "arn:aws:s3:::*"]
-    actions   = [ "s3:*" ]
-    condition = {
-        test      = "Bool"
-        variable  = "aws:SecureTransport"
-        values    = ["false"]
-      }
-  }
-
   # deny some billing bits
   statement {
     # sid *must* be alphanumberic
