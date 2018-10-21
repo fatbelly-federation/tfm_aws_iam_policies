@@ -1,6 +1,4 @@
-# Creates an IAM Policy that grants full access to S3
-# and Denies access to Terraform buckets (terraform*)
-# Used primarily in IAM role attached to servers
+# Create policy that allows creating, deleting and tagging EBS snapshots
 
 # ref: https://www.terraform.io/docs/providers/aws/d/iam_policy_document.html
 
