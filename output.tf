@@ -59,3 +59,13 @@ output "sqs_read_write_policy_document" {
   value = "${data.aws_iam_policy_document.sqs_read_write.json}"
 }
 
+
+# create_delete_ebs_snapshots
+output "create_delete_ebs_snapshots_arn" {
+  value = "${aws_iam_policy.create_delete_ebs_snapshots.arn}"
+}
+
+output "create_delete_ebs_snapshots_policy_document" {
+  value = "${data.aws_iam_policy_document.create_delete_ebs_snapshots.json}"
+}
+
