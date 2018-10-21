@@ -10,20 +10,6 @@ resource "aws_iam_policy" "create_delete_ebs_snapshots" {
 }
 
 data "aws_iam_policy_document" "create_delete_ebs_snapshots" {
-  # explicitly deny unencrypted communications
-  statement {
-    # sid *must* be alphanumberic
-    sid       = "20181021"
-    effect    = "Deny"
-    resources = [ "arn:aws:s3:::*"]
-    actions   = [ "s3:*" ]
-    condition = {
-        test      = "Bool"
-        variable  = "aws:SecureTransport"
-        values    = ["false"]
-      }
-  }
-
   statement {
     # sid *must* be alphanumberic
     sid       = "20181021"
