@@ -9,20 +9,6 @@ resource "aws_iam_policy" "sqs_read_write" {
 }
 
 data "aws_iam_policy_document" "sqs_read_write" {
-  # explicitly deny unencrypted communications
-  statement {
-    # sid *must* be alphanumberic
-    sid       = "20181021"
-    effect    = "Deny"
-    resources = [ "arn:aws:s3:::*"]
-    actions   = [ "s3:*" ]
-    condition = {
-        test      = "Bool"
-        variable  = "aws:SecureTransport"
-        values    = ["false"]
-      }
-  }
-
   statement {
     # sid *must* be alphanumberic
     sid       = "20180909"
