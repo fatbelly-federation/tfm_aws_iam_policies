@@ -6,7 +6,7 @@
 resource "aws_iam_policy" "s3_read_only_access" {
     name = "${var.policy_prefix}_s3_read_only_access"
     path = "/"
-    description = "Allow read and write access to S3, except for terraform buckets"
+    description = "Allow read-only access to S3, except for terraform buckets"
     policy  = "${data.aws_iam_policy_document.s3_read_only_access.json}"
 }
 
