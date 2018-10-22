@@ -42,8 +42,6 @@ data "aws_iam_policy_document" "sqs_read_write" {
   }
 
   statement {
-    # sid *must* be alphanumberic
-    sid       = "20180909"
     effect    = "Allow"
     resources = [ "*" ]
     actions   = [ "sqs:ListQueues" ]

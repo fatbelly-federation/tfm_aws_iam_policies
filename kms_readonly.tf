@@ -35,8 +35,6 @@ data "aws_iam_policy_document" "kms_readonly" {
   }
 
   statement {
-    # sid *must* be alphanumberic
-    sid       = "20181021"
     effect    = "Allow"
     resources = [ "*" ]
     actions   = [

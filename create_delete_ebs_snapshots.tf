@@ -34,8 +34,6 @@ data "aws_iam_policy_document" "create_delete_ebs_snapshots" {
   }
 
     statement {
-    # sid *must* be alphanumberic
-    sid       = "20181021"
     effect    = "Allow"
     resources = [ "*" ]
     actions   = [ "ec2:DescribeInstances" ]

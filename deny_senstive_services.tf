@@ -28,8 +28,6 @@ data "aws_iam_policy_document" "deny_sestive_services" {
 
   # deny access to DirectoryServices
   statement {
-    # sid *must* be alphanumberic
-    sid       = "20180910"
     effect    = "Deny"
     resources = [ "*" ]
     actions   = [ "ds:*" ]
@@ -37,8 +35,6 @@ data "aws_iam_policy_document" "deny_sestive_services" {
 
   # deny some ec2 bits
   statement {
-    # sid *must* be alphanumberic
-    sid       = "20180910"
     effect    = "Deny"
     resources = [ "*" ]
     actions   = [
@@ -77,8 +73,6 @@ data "aws_iam_policy_document" "deny_sestive_services" {
 
   # deny access to some IAM bits
   statement {
-    # sid *must* be alphanumberic
-    sid       = "20180909"
     effect    = "Deny"
     resources = [ "*" ]
     actions   = [

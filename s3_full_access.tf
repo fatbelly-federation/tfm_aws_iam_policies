@@ -24,8 +24,6 @@ data "aws_iam_policy_document" "s3_full_access" {
 
   # explicitly deny unencrypted communications
   statement {
-    # sid *must* be alphanumberic
-    sid       = "20181021"
     effect    = "Deny"
     resources = [ "arn:aws:s3:::*"]
     actions   = [ "s3:*" ]
@@ -37,8 +35,6 @@ data "aws_iam_policy_document" "s3_full_access" {
   }
 
   statement {
-    # sid *must* be alphanumberic
-    sid       = "20180909"
     effect    = "Allow"
     resources = [ "*" ]
     actions   = [ "s3:*" ]
