@@ -81,7 +81,7 @@ output "kms_readonly_arn" {
   value = "${aws_iam_policy.kms_readonly.arn}"
 }
 
-output "kms_readonly_policy_document_json" {
+output "kms_readonly_policy_document" {
   value = "${data.aws_iam_policy_document.kms_readonly.json}"
 }
 
@@ -91,7 +91,43 @@ output "lambda_write_logs_arn" {
   value = "${aws_iam_policy.lambda_write_logs.arn}"
 }
 
-output "lambda_write_logs_policy_document_json" {
+output "lambda_write_logs_policy_document" {
   value = "${data.aws_iam_policy_document.lambda_write_logs.json}"
+}
+
+
+# create_copy_tag_register_images
+output "create_copy_tag_register_images_arn" {
+  value = "${aws_iam_policy.create_copy_tag_register_images.arn}"
+}
+
+output "create_copy_tag_register_images_policy_document" {
+  value = "${data.aws_iam_policy_document.create_copy_tag_register_images.json}"
+}
+
+
+# account_assume_policy
+output "account_assume__policy_document" {
+  value = "${data.aws_iam_policy_document.account_assume_policy.json}"
+}
+
+
+# terraform_buckets_read_write_access
+output "terraform_buckets_read_write_access_arn" {
+  value = "${aws_iam_policy.terraform_buckets_read_write_access.arn}"
+}
+
+output "terraform_buckets_read_write_access_policy_document" {
+  value = "${data.aws_iam_policy_document.terraform_buckets_read_write_access.json}"
+}
+
+
+# terraform_buckets_read_only_access
+output "terraform_buckets_read_only_access_arn" {
+  value = "${aws_iam_policy.terraform_buckets_read_only_access.arn}"
+}
+
+output "terraform_buckets_read_only_access_policy_document" {
+  value = "${data.aws_iam_policy_document.terraform_buckets_read_only_access.json}"
 }
 
